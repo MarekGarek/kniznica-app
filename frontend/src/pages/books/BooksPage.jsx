@@ -70,6 +70,9 @@ function BooksPage() {
               size: "small" 
             }}
             bordered
+            rowClassName={(record) => 
+              selectedBook && record.id === selectedBook.id ? 'selected-r' : ''
+            }
           />
         </TableCard>
 

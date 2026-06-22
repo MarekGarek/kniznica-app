@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Layout, Button } from 'antd';
-import { colors } from './theme';
+import { colors } from '../../styles/theme';
 
 const { Header } = Layout;
 
@@ -29,6 +29,7 @@ export const HeaderTitle = styled.h1`
   font-weight: 700; 
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 
   background: linear-gradient(135deg, #FFF6EE 0%, #e3ccb5 100%);
   -webkit-background-clip: text;

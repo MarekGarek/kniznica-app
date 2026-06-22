@@ -31,7 +31,7 @@ export const AgendaTitle = styled.h2`
     left: 0;
     width: 140px;
     height: 2px;
-    background: linear-gradient(90deg, #D96B43 0%, rgba(217, 107, 67, 0) 100%);
+    background: ${colors.underlineGradient};
     border-radius: 2px;
   }
 `;
@@ -50,16 +50,10 @@ export const AddButton = styled(Button)`
 export const AgendaWrapper = styled.div`
   min-height: 85vh;
   padding: 3vh 3vw;
-  border-radius: 1.5rem;
-  box-shadow: inset 0 0 20px rgba(217, 107, 67, 0.02);
   position: relative;
 
   background: 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FAF8F5' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='scale(0.6) translate(8, 8)'%3E${props => props.iconPaths || `<path d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'/%3E%3Cpath d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/%3E`}%3C/g%3E%3C/svg%3E") 
-    repeat, 
-    ${colors.warmCream};
-
-  background-size: 150px 150px; 
+    ${colors.warmCream}; 
 `;
 
 export const TableCard = styled(Card)`

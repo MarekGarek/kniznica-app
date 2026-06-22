@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dropdown, ConfigProvider } from 'antd';
 import { BookOutlined, UserOutlined, SwapOutlined, MenuOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 import { 
   StyledHeader, 
@@ -8,9 +9,11 @@ import {
   HeaderTitle, 
   MenuButton, 
   dropdownTheme 
-} from '../styles/Header.styles.js';
+} from './Header.styles.js';
 
 function HeaderComponent({ isAdminMode, onDropdownClick }) {
+  const navigate = useNavigate();
+
   const dropdownItems = [
     { key: 'books', icon: <BookOutlined />, label: 'KNIHY' },
     { key: 'readers', icon: <UserOutlined />, label: 'ČITATELIA' },
@@ -22,7 +25,9 @@ function HeaderComponent({ isAdminMode, onDropdownClick }) {
       
       <HeaderSpacer />
       
-      <HeaderTitle>🏛️ KNIŽNICA SYSTEM</HeaderTitle>
+      <HeaderTitle onClick={() => navigate('/')} >
+        🏛️ KNIŽNICA SYSTEM
+      </HeaderTitle>
 
       {!isAdminMode ? (
         <ConfigProvider theme={dropdownTheme}>

@@ -56,6 +56,9 @@ function ReadersPage() {
               showLessItems: true, 
               size: "small" 
             }}
+            rowClassName={(record) => 
+              editingReader && record.id_card === editingReader.id_card ? 'selected-r' : ''
+            }
           />
         </TableCard>
 

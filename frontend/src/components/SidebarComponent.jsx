@@ -14,13 +14,10 @@ function SidebarComponent({ currentTab, onMenuClick }) {
     { key: 'go-home', icon: <HomeOutlined />, label: 'Úvodná stránka', danger: true },
   ];
 
-
-  const sidebarGradient = `linear-gradient(135deg, ${colors.bgSidebar} 0%, #1a1614 100%)`;
-
   return (
     <Sider 
       width={250} 
-      style={{ backgroundImage: sidebarGradient }}
+      style={{ backgroundImage: colors.sidebarGradient }}
     >
       <Menu 
         theme="dark" 
